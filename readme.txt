@@ -1,5 +1,7 @@
 sTabs jQuery plugin by Smasty
 =============================
+Tiny jQuery plugin making tabs from simple unordered lists.
+Licensed under the MIT license (http://www.opensource.org/licenses/mit-license.php)
 
 Example
 =======
