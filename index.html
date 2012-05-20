@@ -1,0 +1,165 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="author" content="Smasty, http://smasty.net">
+  <meta name="description" content="Tiny plugin which makes tabs feature from simple unordered lists.">
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript"></script>
+  <script src="jquery.sTabs.js" type="text/javascript"></script>
+  <script type="text/javascript">
+  $(function(){
+    $('#default').sTabs();
+    $('#options').sTabs({animate:true, eventType: 'mouseover'});
+  });
+  </script>
+  <title>sTabs jQuery plugin</title>
+  </head>
+  <body class="nojs">
+  <div id="page">
+    <h1>sTabs jQuery plugin <small>by Smasty</small></h1>
+
+    <p>
+      Tiny plugin which makes tabs feature from simple unordered lists.
+    </p>
+
+    <h2>API</h2>
+    These options are available for the plugin:
+    <dl>
+      <dt>int <strong>startWith</strong></dt>
+        <dd>default: 1<br>
+        Number of tab to activate as first.</dd>
+
+      <dt>string <strong>eventType</strong></dt>
+        <dd>default: 'click'<br>
+        Event to handle changing tabs. Must be a valid <code>jQuery.bind()</code> event type.</dd>
+
+      <dt>bool <strong>animate</strong></dt>
+        <dd>default: false<br>
+        Whether or not animate changing tabs.</dd>
+
+      <dt>int <strong>duration</strong></dt>
+        <dd>default: 300<br>
+        Duration of animation in miliseconds.</dd>
+    </dl>
+
+    <p>Options should be passed to plugin as an object.</p>
+
+    <h2>Demo</h2>
+
+    <h3>Default functionality</h3>
+
+<pre>
+$(function(){
+  $('#<strong>default</strong>').sTabs();
+});</pre>
+
+  <ul id="default">
+    <li><a href="#def-first">First Tab</a></li>
+    <li><a href="#def-second">Second Tab</a></li>
+    <li><a href="#def-third">Third Tab</a></li>
+    <li><a href="#def-code">HTML for this example</a></li>
+  </ul>
+
+  <div id="def-first">
+    <h2>Lorem ipsum dolor</h2>
+    <p>Eu ornare id enim mollis laoreet vel Vestibulum id Ut ligula. Accumsan pulvinar congue egestas Cras Phasellus risus rutrum lobortis et Phasellus. Id netus id ultrices faucibus congue a eget rutrum laoreet ridiculus. Nec Donec malesuada turpis faucibus fermentum mauris eget sem Vestibulum Duis. Ut id urna orci a lobortis.</p>
+    <p>Id risus Pellentesque Morbi urna elit sodales turpis hendrerit auctor nunc. Ipsum cursus velit Lorem et wisi Maecenas quis in ante Sed. Tellus malesuada dis a ut Nunc ipsum id tincidunt.</p>
+  </div>
+  <div id="def-second">
+    <h2>Sollicitudin urna</h2>
+    <p>Sollicitudin urna Praesent turpis tincidunt id eros Pellentesque et pede nisl. Dolor tempor laoreet feugiat at Nulla libero facilisi laoreet Vestibulum consequat. Ut Sed nulla mauris at libero semper Maecenas morbi leo quis. Wisi quis Donec lacus Vivamus laoreet sagittis suscipit fringilla orci venenatis. Adipiscing porttitor elit pellentesque neque dui lacus dignissim semper tincidunt feugiat. </p>
+    <p>Id risus Pellentesque Morbi urna elit sodales turpis hendrerit auctor nunc. Ipsum cursus velit Lorem et wisi Maecenas quis in ante Sed. Tellus malesuada dis a ut Nunc ipsum id tincidunt.</p>
+  </div>
+  <div id="def-third">
+    <h2>Eu ornare id</h2>
+    <p>Eu ornare id enim mollis laoreet vel Vestibulum id Ut ligula. Accumsan pulvinar congue egestas Cras Phasellus risus rutrum lobortis et Phasellus. Id netus id ultrices faucibus congue a eget rutrum laoreet ridiculus. Nec Donec malesuada turpis faucibus fermentum mauris eget sem Vestibulum Duis. Ut id urna orci a lobortis.</p>
+    <p>Id risus Pellentesque Morbi urna elit sodales turpis hendrerit auctor nunc. Ipsum cursus velit Lorem et wisi Maecenas quis in ante Sed. Tellus malesuada dis a ut Nunc ipsum id tincidunt.</p>
+  </div>
+  <div id="def-code">
+    <h2>HTML for this example</h2>
+    <pre>
+  &lt;ul id=&quot;<strong>default</strong>&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#def-first&quot;&gt;First Tab&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#def-second&quot;&gt;Second Tab&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#def-third&quot;&gt;Third Tab&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#def-code&quot;&gt;HTML for this example&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;div id=&quot;def-first&quot;&gt;
+    ...
+  &lt;/div&gt;
+  &lt;div id=&quot;def-second&quot;&gt;
+    ...
+  &lt;/div&gt;
+  &lt;div id=&quot;def-third&quot;&gt;
+    ...
+  &lt;/div&gt;
+  &lt;div id=&quot;def-code&quot;&gt;
+    ...
+  &lt;/div&gt;</pre>
+  </div>
+
+
+
+
+    <h3>Additional parameters</h3>
+
+<pre>
+$(function(){
+  $('#<strong>options</strong>').sTabs({animate: true, eventType: 'mouseover'});
+});</pre>
+
+  <ul id="options">
+    <li><a href="#opts-first">First Tab</a></li>
+    <li><a href="#opts-second">Second Tab</a></li>
+    <li><a href="#opts-third">Third Tab</a></li>
+    <li><a href="#opts-code">HTML for this example</a></li>
+  </ul>
+
+  <div id="opts-first">
+    <h2>Lorem ipsum dolor</h2>
+    <p>Eu ornare id enim mollis laoreet vel Vestibulum id Ut ligula. Accumsan pulvinar congue egestas Cras Phasellus risus rutrum lobortis et Phasellus. Id netus id ultrices faucibus congue a eget rutrum laoreet ridiculus. Nec Donec malesuada turpis faucibus fermentum mauris eget sem Vestibulum Duis. Ut id urna orci a lobortis.</p>
+    <p>Id risus Pellentesque Morbi urna elit sodales turpis hendrerit auctor nunc. Ipsum cursus velit Lorem et wisi Maecenas quis in ante Sed. Tellus malesuada dis a ut Nunc ipsum id tincidunt.</p>
+  </div>
+  <div id="opts-second">
+    <h2>Sollicitudin urna</h2>
+    <p>Sollicitudin urna Praesent turpis tincidunt id eros Pellentesque et pede nisl. Dolor tempor laoreet feugiat at Nulla libero facilisi laoreet Vestibulum consequat. Ut Sed nulla mauris at libero semper Maecenas morbi leo quis. Wisi quis Donec lacus Vivamus laoreet sagittis suscipit fringilla orci venenatis. Adipiscing porttitor elit pellentesque neque dui lacus dignissim semper tincidunt feugiat. </p>
+    <p>Id risus Pellentesque Morbi urna elit sodales turpis hendrerit auctor nunc. Ipsum cursus velit Lorem et wisi Maecenas quis in ante Sed. Tellus malesuada dis a ut Nunc ipsum id tincidunt.</p>
+  </div>
+  <div id="opts-third">
+    <h2>Eu ornare id</h2>
+    <p>Eu ornare id enim mollis laoreet vel Vestibulum id Ut ligula. Accumsan pulvinar congue egestas Cras Phasellus risus rutrum lobortis et Phasellus. Id netus id ultrices faucibus congue a eget rutrum laoreet ridiculus. Nec Donec malesuada turpis faucibus fermentum mauris eget sem Vestibulum Duis. Ut id urna orci a lobortis.</p>
+    <p>Id risus Pellentesque Morbi urna elit sodales turpis hendrerit auctor nunc. Ipsum cursus velit Lorem et wisi Maecenas quis in ante Sed. Tellus malesuada dis a ut Nunc ipsum id tincidunt.</p>
+  </div>
+    <div id="opts-code">
+    <h2>HTML for this example</h2>
+    <pre>
+  &lt;ul id=&quot;<strong>options</strong>&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#opts-first&quot;&gt;First Tab&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#opts-second&quot;&gt;Second Tab&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#opts-third&quot;&gt;Third Tab&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#opts-code&quot;&gt;HTML for this example&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;div id=&quot;opts-first&quot;&gt;
+    ...
+  &lt;/div&gt;
+  &lt;div id=&quot;opts-second&quot;&gt;
+    ...
+  &lt;/div&gt;
+  &lt;div id=&quot;opts-third&quot;&gt;
+    ...
+  &lt;/div&gt;
+  &lt;div id=&quot;opts-code&quot;&gt;
+    ...
+  &lt;/div&gt;</pre>
+  </div>
+
+    <p class="footer">
+      &copy; <a href="http://smasty.net">Smasty</a> 2010.
+    </p>
+    </div>
+  </body>
+</html>
