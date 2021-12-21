@@ -1,7 +1,7 @@
 # sTabs jQuery plugin
 
 Tiny jQuery plugin making tabs from simple unordered lists.
-Licensed under the MIT license (http://www.opensource.org/licenses/mit-license.php)
+Licensed under the MIT License (https://opensource.org/licenses/MIT)
 
 ## Example
 ```javascript
@@ -12,14 +12,24 @@ $(function(){
 
 ## Options
 
-### startWith (int; default: 1)
-Number of tab to activate as first.
+- `startWith (int; default: 1)` \
+Which tab should be activated as first.
 
-### eventType (string; default: 'click')
-Event to handle changing tabs. Must be a valid `jQuery.bind()` event type.
+- `eventType (string; default: 'click')` \
+Event to trigger changing tabs. Must be a valid `jQuery.bind()` event type.
 
-### animate (bool; default: false)
-Whether or not animate changing tabs.
+- `followTarget (bool; default: true)` \
+Should the tab referenced by `location.hash` be activated on page load?
+If enabled, also updates the location.hash via `history.pushState`.
 
-### duration (int; default: 300)
-Duration of animation in miliseconds.
+- `animate (bool; default: false)` \
+Add fadeIn animation when changing tabs.
+
+- `duration (int; default: 300)` \
+Duration of animation in milliseconds.
+
+- `cycle (bool; default: false)` \
+Automatically cycle through tabs.
+
+- `interval (int; default: 5000)` \
+Cycle interval in miliseconds.
